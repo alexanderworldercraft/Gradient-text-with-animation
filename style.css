@@ -1,0 +1,23 @@
+body {
+    background-color: black; /* Définit la couleur d'arrière-plan de la page entière en noir */
+}
+
+.text {
+    background: linear-gradient(to right, #00a8fd 0%, #FFF 50%, #E00A95 100%); /* Applique un dégradé linéaire comme fond du texte */
+    background-size: 500%; /* Agrandit le fond pour permettre l'animation du dégradé */
+    background-clip: text; /* Fait en sorte que le fond (le dégradé) ne s'applique qu'au texte lui-même */
+    -webkit-text-fill-color: transparent; /* Rend le texte lui-même transparent, montrant seulement le dégradé de fond */
+    animation: gradient 7s linear infinite; /* Applique l'animation nommée 'gradient' qui dure 3 secondes et se répète indéfiniment */
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 150%; /* Position de départ du fond (dégradé) */
+    }
+    50% {
+        background-position: 100% 0%; /* Position du fond à mi-chemin de l'animation */
+    }
+    100% {
+        background-position: 0% 150%; /* Retour à la position de départ du fond à la fin de l'animation */
+    }
+}
